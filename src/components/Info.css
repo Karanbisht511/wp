@@ -1,0 +1,46 @@
+@media screen and (min-width: 768px){
+.info{
+    width: 40vw;
+    margin-left: 110px;
+    margin-top: 70px;
+    /* padding-right: 400px; */
+
+}
+
+.large-text{
+    line-height: 8rem;
+    font-size: 7rem;
+    background-color: white;
+}
+
+.contact-button{
+    width: 150px;
+    height: 40px;
+    border-radius: 25px;
+    border:  1px solid #5956E9;
+    background-color: white;
+}
+
+.contact-button:hover{
+    border:  1px solid #5956E9;
+    background-color: #5956E9;
+    color: white;
+}
+
+.info-element{
+    margin-top:20px
+}
+
+.ring{
+    mask-image: linear-gradient(to top left, transparent 28%, black);
+    position: absolute;
+    top: 115px;
+left: 16px;
+    /* top: 100px;
+    left: 15px; */
+    border-radius: 0px 0px 10px 0px;
+    width: 200px;
+    height: 200px;
+}
+
+}

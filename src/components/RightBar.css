@@ -1,0 +1,23 @@
+
+@media screen and (min-width: 768px){
+.photo img{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    top: 90px;
+
+}
+
+.image-background{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px solid black;
+    width: 45vw;
+    height: 625px;
+    border-radius: 70% 0 0 70%;
+    background-color: #6361EB;
+    z-index: -1;
+}
+
+}

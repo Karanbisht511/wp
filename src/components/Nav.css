@@ -1,0 +1,25 @@
+@media screen and (min-width: 768px) {
+
+.nav{
+    /* margin-left: 50px; */
+    /* display: flex; */
+    justify-content: space-evenly;
+    width: 50vw;
+    margin: 10px 50px;
+  
+  }
+
+  .header-element{
+    margin-top: 50px;
+  }
+
+.active-link{
+    border-top: 2px solid #5956E9;
+}
+
+.nav-element:hover{
+    border-top: 1px solid #5956E9;
+    cursor: pointer;
+}
+
+}

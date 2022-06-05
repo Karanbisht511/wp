@@ -1,0 +1,119 @@
+@media screen and (min-width: 768px) {
+  
+    .template-container{
+        border: 2px solid black;
+        width: 400px;
+        height: 400px;
+    }
+    
+          .invitation-home-container{
+              display: flex;
+              justify-content: space-around;
+              align-items: center; 
+              margin: 25px auto;
+              border-top: 2px solid grey;
+              width: 80vw;
+          }
+        
+.sub-container{
+    margin:30px 5px;
+}
+
+.small-flex-container{
+    display: flex; 
+    justify-content: space-between;
+   
+    /* width: 350px; */
+}
+
+.elements{
+margin: 5px;
+}
+.date{
+    margin-top:10px;
+}
+.bold{
+    font-weight: 2px;
+   margin-right: 10px;
+   margin-left:5px;
+}
+
+
+
+/* .search{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100px;
+    
+} */
+
+.button2{
+    display: flex;
+    justify-content: space-evenly;
+    width: 115px;
+    border-radius: 5px;
+    padding: 3px;
+    margin-top: 20px;
+    margin-left: 75px;
+    border: 1px solid black;
+}
+.button2:hover{
+    border: 1.5px solid black;
+}
+
+.grey{
+    border: 1px solid black;
+    background-color: #E8EAEE;
+}
+.guest-container{
+
+    width: 95vw;
+    margin: 50px auto;
+}
+
+.guest-container .headers{
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+.guest-container table{
+    height: 30vh;
+    width: 90%;
+    margin: 50px auto;
+    text-align: left;
+    overflow-y: scroll;
+}
+.guest-container td{
+padding: 10px;
+}
+
+.input-box{
+    border: 2px solid rgb(177 167 167);
+    padding: 5px;
+    border-radius: 9px;
+    margin: 3px 0px;
+}
+
+.button{
+    padding:5px 50px;
+    margin: 10px;
+    border-radius: 5px;
+    }
+    .blue{
+        border: 1px solid black;
+        background-color: #6361EB;
+    color: white;
+    }
+    
+
+.cardForm-button{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0px 30px;
+    width: 100px;
+}
+
+}
+    
+

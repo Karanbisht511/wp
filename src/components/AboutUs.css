@@ -1,0 +1,25 @@
+
+@media screen and (min-width: 768px) {
+.aboutUs-container{
+    margin: auto;
+    width: 80vw;
+    /* border: 1px solid black; */
+align-items: center;
+
+}
+
+.story{
+font-size: 1.5rem;
+    padding: 20px;
+}
+
+.story p{
+    margin: 15px;
+}
+
+.aboutUs-container img{
+    /* width: 50%; */
+    height: 500px;
+}
+
+}

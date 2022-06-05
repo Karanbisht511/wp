@@ -1,0 +1,49 @@
+@media screen and (min-width: 768px) {
+
+.feature-wrapper{
+    margin: 150px 150px 50px 150px;
+    /* margin: 25px 150px 50px 150px; */
+    /* border-top: 2px solid black; */
+}
+
+.circle{
+    border-radius: 50%;
+    padding: 50px 65px;
+    position: relative;
+    left: 328px;
+top: 46px;
+    /* left: 330px;
+    top: 49px; */
+    z-index: -1;
+    background-color:#6361EB;
+}
+
+.feature-container{
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin: 50px auto ;
+    background-image: url("/public/images/background-grey.png");
+    background-size: 75% 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+  
+}
+
+.left{
+   
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+/* .left:hover{} */
+
+.right{
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+/* .right:hover{} */
+
+}

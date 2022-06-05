@@ -1,0 +1,48 @@
+.dashboard-container{
+    border-top: 2px solid black;
+    margin: 15px auto;
+    width: 80vw;
+    justify-content: space-between;
+}
+
+/* .left-container{
+    width: 35%;
+} */
+.right-container{
+    margin-top: 20px;
+    /* width: 65%; */
+}
+
+.detail{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+
+.arrangement-container{
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin: 20px auto;
+    
+}
+
+
+.arrangement-head{
+    margin-bottom: 7px;
+}
+
+.arrangement-components{
+    width: 30%;
+}
+
+.center-div{
+    width: 25%;
+    margin: auto;
+}
+
+/* .arrangement-components{
+    text-align: center;
+} */

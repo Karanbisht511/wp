@@ -1,0 +1,9 @@
+@media screen and (min-width: 768px) {
+  
+    #header{   
+      justify-content: space-between;
+      /* border-bottom:2px solid #503c3c; */
+      /* box-shadow: 2px 3px #888888; */
+
+    }
+}
