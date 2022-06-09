@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./Dashboard.css";
 import { Link, useNavigate } from "react-router-dom";
 import Axios from "axios";
+import Tiles from "../Tiles";
 
 export default function Dashboard() {
   // const [allDetails, setAllDetails] = useState();
@@ -23,7 +24,7 @@ export default function Dashboard() {
       params: { id: templateId },
     })
       .then((response) => {
-        // console.log("template:", response.data);
+        console.log("template:", response.data);
         setTemplate(response.data);
       })
       .catch((error) => {
@@ -123,14 +124,15 @@ export default function Dashboard() {
 
     console.log(templateId, " ", cosmetologistId);
 
-    getTemplate(templateId);
-
-    getDecorator(decoratorId);
-    getCosmetologist(cosmetologistId);
-    getVenue(resortId);
-    getPhotographer(photographerId);
-    getVideographer(videographerId);
-    getTravelAgency(agencyId);
+    templateId ? getTemplate(templateId) : setTemplate(null);
+    decoratorId ? getDecorator(decoratorId) : setDecorator(null);
+    cosmetologistId
+      ? getCosmetologist(cosmetologistId)
+      : setCosmetologist(null);
+    resortId ? getVenue(resortId) : setVenue(null);
+    photographerId ? getPhotographer(photographerId) : setPhotographer(null);
+    videographerId ? getVideographer(videographerId) : setPhotographer(null);
+    agencyId ? getTravelAgency(agencyId) : setTravelAgency(null);
   };
 
   const getAllDetails = async () => {
@@ -184,190 +186,97 @@ export default function Dashboard() {
       <div className="right-container">
         <h1 style={{ textAlign: "center" }}>Arrangements</h1>
 
-        <div className="arrangement-components tile center-div">
-          <h2 className="arrangement-head">Template</h2>
+        <div className="arrangement-container flex-container">
           {template ? (
-            <div className="flex-container ">
-              <div className="attributes">
-                <p>Name:</p>
-                <p>Description:</p>
-                <p>Price:</p>
-              </div>
-              <div className="values">
-                <p>{template.title}</p>
-                <p>{template.description}</p>
-                <p>{template.price}</p>
-              </div>
-            </div>
+            <Tiles data={template} title="Template" />
           ) : (
             <button
+              className="blue generic-button"
               onClick={() => {
                 navigate("/invitationTemplates");
               }}
             >
-              setTemplates
+              Book decorator
             </button>
           )}
-        </div>
 
-        <div className="arrangement-container flex-container">
-          <div className="arrangement-components tile">
-            <h2 className="arrangement-head">Venue</h2>
-            {venue ? (
-              <div className="flex-container">
-                <div className="attributes">
-                  <p>Name:</p>
-                  <p>Mobile:</p>
-                  <p>Address:</p>
-                </div>
-                <div className="values">
-                  <p>{venue.name}</p>
-                  <p>{venue.mobile}</p>
-                  <p>{venue.address + "," + venue.pincode}</p>
-                </div>
-              </div>
-            ) : (
-              <Link to="/weddingResorts">
-                <button
-                // onClick={() => {
-                //   navigate("/weddingResorts");
-                // }}
-                >
-                  Book Venue
-                </button>
-              </Link>
-            )}
-          </div>
+          {venue ? (
+            <Tiles data={venue} title="Venue" />
+          ) : (
+            <button
+              className="blue generic-button"
+              onClick={() => {
+                navigate("/weddingResorts");
+              }}
+            >
+              Book Venue
+            </button>
+          )}
 
-          <div className="arrangement-components tile">
-            <h2 className="arrangement-head">Decorator</h2>
-            {decorator ? (
-              <div className="flex-container">
-                <div className="attributes">
-                  <p>Name:</p>
-                  <p>Mobile:</p>
-                  <p>Address:</p>
-                </div>
-                <div className="values">
-                  <p>{decorator.name}</p>
-                  <p>{decorator.mobile}</p>
-                  <p>{decorator.address + "," + decorator.pincode}</p>
-                </div>
-              </div>
-            ) : (
-              <button
-                onClick={() => {
-                  navigate("/decorators");
-                }}
-              >
-                Book decorator
-              </button>
-            )}
-          </div>
+          {decorator ? (
+            <Tiles data={decorator} title="Decorator" />
+          ) : (
+            <button
+              className="blue generic-button"
+              onClick={() => {
+                navigate("/decorators");
+              }}
+            >
+              Book decorator
+            </button>
+          )}
 
-          <div className="arrangement-components tile">
-            <h2 className="arrangement-head">Cosmetologist</h2>
-            {cosmetologist ? (
-              <div className="flex-container">
-                <div className="attributes">
-                  <p>Name:</p>
-                  <p>Mobile:</p>
-                  <p>Address:</p>
-                </div>
-                <div className="values">
-                  <p>{cosmetologist.name}</p>
-                  <p>{cosmetologist.mobile}</p>
-                  <p>{cosmetologist.address + "," + cosmetologist.pincode}</p>
-                </div>
-              </div>
-            ) : (
-              <button
-                onClick={() => {
-                  navigate("/cosmetologist");
-                }}
-              >
-                Book cosmetologist
-              </button>
-            )}
-          </div>
+          {cosmetologist ? (
+            <Tiles data={cosmetologist} title="Cosmetologist" />
+          ) : (
+            <button
+              className="blue generic-button"
+              onClick={() => {
+                navigate("/cosmetologist");
+              }}
+            >
+              Book cosmetologist
+            </button>
+          )}
 
-          <div className="arrangement-components tile">
-            <h2 className="arrangement-head">Photographer</h2>
-            {photographer ? (
-              <div className="flex-container">
-                <div className="attributes">
-                  <p>Name:</p>
-                  <p>Mobile:</p>
-                  <p>Address:</p>
-                </div>
-                <div className="values">
-                  <p>{photographer.name}</p>
-                  <p>{photographer.mobile}</p>
-                  <p>{photographer.address + "," + photographer.pincode}</p>
-                </div>
-              </div>
-            ) : (
-              <button
-                onClick={() => {
-                  navigate("/photoVideoHome");
-                }}
-              >
-                Book photographer
-              </button>
-            )}
-          </div>
+          {photographer ? (
+            <Tiles data={photographer} title="Photographer" />
+          ) : (
+            <button
+              className="blue generic-button"
+              onClick={() => {
+                navigate("/photoVideoHome");
+              }}
+            >
+              Book photographer
+            </button>
+          )}
 
-          <div className="arrangement-components tile">
-            <h2 className="arrangement-head">TravelAgency</h2>
-            {travelAgency ? (
-              <div className=" flex-container">
-                <div className="attributes">
-                  <p>Name:</p>
-                  <p>Mobile:</p>
-                  <p>Address:</p>
-                </div>
-                <div className="values">
-                  <p>{travelAgency.name}</p>
-                  <p>{travelAgency.mobile}</p>
-                  <p>{travelAgency.address + "," + travelAgency.pincode}</p>
-                </div>
-              </div>
-            ) : (
-              <button
-                onClick={() => {
-                  navigate("/travelAgency");
-                }}
-              >
-                Book travelAgency
-              </button>
-            )}
-          </div>
+          {travelAgency ? (
+            <Tiles data={travelAgency} title="Travel Agency" />
+          ) : (
+            <button
+              className="blue generic-button"
+              onClick={() => {
+                navigate("/travelAgency");
+              }}
+            >
+              Book travelAgency
+            </button>
+          )}
 
-          <div className="arrangement-components tile">
-            <h2 className="arrangement-head">Videographer</h2>
-            {videographer ? (
-              <div className=" flex-container">
-                <div className="attributes">
-                  <p>Name:</p>
-                  <p>Mobile:</p>
-                  <p>Address:</p>
-                </div>
-                <div className="values">
-                  <p>{videographer.name}</p>
-                  <p>{videographer.mobile}</p>
-                  <p>{videographer.address + "," + videographer.pincode}</p>
-                </div>
-              </div>
-            ) : (
-              <button
-                onClick={() => {
-                  navigate("/photoVideoHome");
-                }}
-              >
-                Book Videographer
-              </button>
-            )}
-          </div>
+          {videographer ? (
+            <Tiles data={videographer} title="Videographer" />
+          ) : (
+            <button
+              className="blue generic-button"
+              onClick={() => {
+                navigate("/photoVideoHome");
+              }}
+            >
+              Book Videographer
+            </button>
+          )}
         </div>
       </div>
     </div>

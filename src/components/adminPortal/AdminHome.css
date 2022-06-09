@@ -1,0 +1,73 @@
+
+
+#categories{
+    width: 15%;
+}
+
+#information{
+    width: 70%;
+    margin: 50px auto;
+}
+
+
+
+#information .headers{
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+#information table{
+    height: 30vh;
+    width: 90%;
+    margin: 50px auto;
+    text-align: left;
+    overflow-y: scroll;
+}
+
+#information td{
+padding: 10px;
+}
+
+.admin-home-container{
+    width: 90%;
+    height: 100%;
+   margin: 50px auto;
+}
+
+.admin-content-container{
+
+    align-items: center;
+
+}
+
+.category{
+    font-size: 1.2rem;
+    margin: 15px auto;
+    padding: 5px;
+    border-radius: 10px ;
+}
+
+.category:hover{
+    cursor: pointer;
+    background-color: var(--blue);
+    color: white;
+}
+
+.blue-bg{
+    background-color: var(--blue);
+    color: white;
+}
+
+
+
+#information table{
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.admin-add-button{
+    width: 20%;
+border-radius:10px ;
+display: flex;
+justify-content: space-evenly;
+}

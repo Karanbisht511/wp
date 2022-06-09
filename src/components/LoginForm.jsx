@@ -86,7 +86,7 @@ export default function LoginForm() {
 
           <input className="login-signin-button" type="submit" value="Signin" />
         </form>
-        <Link to="/admin">
+        <Link to="/admin-login">
           {" "}
           <button className="blue generic-button admin-login-button">
             {" "}

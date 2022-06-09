@@ -25,14 +25,21 @@ export default function UpdateUserInformation() {
         <h1>Updation Form</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
+            className="input-box"
             type="text"
             placeholder="FirstName"
             {...register("firstName")}
           />
 
-          <input type="text" placeholder="LastName" {...register("lastName")} />
+          <input
+            className="input-box"
+            type="text"
+            placeholder="LastName"
+            {...register("lastName")}
+          />
           <br></br>
           <input
+            className="input-box"
             type="number"
             placeholder="Mobile"
             {...register("mobile", {
@@ -46,8 +53,12 @@ export default function UpdateUserInformation() {
             <p>mobile number should be of 10 digits</p>
           )}
           <br></br>
-          <textarea placeholder="Address" {...register("address")} />
-          <input
+          <textarea
+            className="input-box"
+            placeholder="Address"
+            {...register("address")}
+          />
+          {/* <input
             type="number"
             placeholder="Pin-code"
             {...register("pincode", {
@@ -60,11 +71,17 @@ export default function UpdateUserInformation() {
           {(errors?.pincode?.type === "minLength" ||
             errors?.pincode?.type === "maxLength") && (
             <>pincode should be of 6 digits</>
-          )}
-          <br></br>
-          <input type="email" placeholder="E-mail" {...register("email")} />
+          )} */}
           <br></br>
           <input
+            className="input-box"
+            type="email"
+            placeholder="E-mail"
+            {...register("email")}
+          />
+          <br></br>
+          <input
+            className="input-box"
             type="password"
             placeholder="current Password"
             {...register("currentPassword", { required: true })}
@@ -74,12 +91,14 @@ export default function UpdateUserInformation() {
           )}
           <br></br>
           <input
+            className="input-box"
             type="password"
             placeholder="Password"
             {...register("newPassword")}
           />
           <br></br>
           <input
+            className="input-box"
             id="confirm-password"
             type="password"
             placeholder="confirm Password"
@@ -87,7 +106,7 @@ export default function UpdateUserInformation() {
           />
 
           <br></br>
-          <input type="submit" value="Save" />
+          <input className="blue generic-button" type="submit" value="Save" />
         </form>
       </div>
     </>

@@ -1,5 +1,4 @@
 const marriageDetails = require("../models/marriageDetails");
-
 const { ObjectId } = require("mongodb");
 
 exports.setTemplateCardDetails = (req, res) => {
@@ -20,7 +19,7 @@ exports.setTemplateCardDetails = (req, res) => {
       eventDate,
     } = data;
     console.log(data);
-    console.log(groomName);
+    // console.log(groomName);
     updates.cardDetails.groomName = groomName;
     updates.cardDetails.brideName = brideName;
     updates.cardDetails.pincode = pincode;

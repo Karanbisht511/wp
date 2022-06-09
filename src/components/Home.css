@@ -65,6 +65,7 @@ body{
 
 .generic-button{
   width: 10%;
+  height: 5%;
   padding: 5px ;
   margin:20px auto;
   border-radius:10px;
@@ -75,13 +76,13 @@ body{
   /* border: 1px solid black; */
   padding: 15px;
   margin: 10px;
-  width: 25%;
+  /* width: 25%; */
   transition: all .3s ease-in-out;
   box-sizing: border-box;
- overflow-wrap: break-word;
+ /* overflow-wrap: break-word; */
 }
 .tile:hover{
-transform: scale(1.1);
+transform: scale(1.05);
 }
 
 .tile-selected{

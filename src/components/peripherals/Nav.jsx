@@ -21,16 +21,25 @@ export default function Nav() {
   const port = process.env.REACT_APP_PORT;
   return (
     <nav className="nav flex-container header-element">
+      <Link
+        to="/"
+        id="Home-link"
+        className="nav-element active-link"
+        onClick={addActiveLinkClass}
+      >
+        Home
+      </Link>
+      <Link
+        to="/explore"
+        // href="#Explore"
+        id="Explore-link"
+        className="nav-element"
+        onClick={addActiveLinkClass}
+      >
+        Explore Features
+      </Link>
       {sessionStorage.getItem("userInformation") ? (
         <>
-          <Link
-            to="/"
-            id="Home-link"
-            className="nav-element active-link"
-            onClick={addActiveLinkClass}
-          >
-            Home
-          </Link>
           <Link
             to="/dashboard"
             // href="#Explore"
@@ -55,32 +64,6 @@ export default function Nav() {
         </>
       ) : (
         <>
-          <Link
-            to="/"
-            // href="#Home"
-            id="Home-link"
-            className="nav-element active-link"
-            onClick={addActiveLinkClass}
-          >
-            Home
-          </Link>
-          {/* <a
-            href="#Features"
-            id="Feature-link"
-            className="nav-element"
-            onClick={addActiveLinkClass}
-          >
-            Explore Features
-          </a> */}
-          <Link
-            to="/explore"
-            // href="#Explore"
-            id="Explore-link"
-            className="nav-element"
-            onClick={addActiveLinkClass}
-          >
-            Explore Features
-          </Link>
           <Link
             to="/aboutUs"
             // href="#AboutUs"

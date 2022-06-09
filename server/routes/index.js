@@ -14,9 +14,9 @@ const cosmetologist = require("./cosmetologist");
 const invitation = require("./invitation");
 const invitationTemplate = require("./invitationTemplates");
 
-// Router.get("/admin", admin);
-Router.get("/adminLogin", adminController.Login);
-Router.get("/adminSignup", adminController.Signup);
+Router.use("/admin", admin);
+// Router.get("/adminLogin", adminController.Login);
+// Router.post("/adminSignup", adminController.Signup);
 
 Router.get("/login", userController.Login);
 Router.post("/signup", userController.signup);
@@ -24,7 +24,6 @@ Router.get("/getUserInfo", userController.getUserInfo);
 Router.post("/updateUserInfo", userController.updateUserInformation);
 
 Router.use("/weddingResorts", weddingResorts); //routing to wedding Resort router
-// Router.use("/relative", relative); //routing to relative router"
 Router.use("/travelAgency", travelAgency); //routing to travel Agency router
 Router.use("/photographer", photographer); //routing to photographer router
 Router.use("/videographer", videographer); //routing to videographer router

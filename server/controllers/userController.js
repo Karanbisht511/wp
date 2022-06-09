@@ -1,9 +1,7 @@
 require("dotenv").config();
 const bcrypt = require("bcrypt");
-
 const User = require("../models/user");
 const marriageDetails = require("../models/marriageDetails");
-
 const { ObjectId } = require("mongodb");
 const { hash } = require("bcrypt");
 

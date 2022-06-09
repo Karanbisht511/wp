@@ -5,27 +5,27 @@ const Admin = require("../models/admin");
 
 const { ObjectId } = require("mongodb");
 const { hash } = require("bcrypt");
-
 const saltRounds = parseInt(process.env.SALTROUNDS);
 
 exports.Login = async (req, res) => {
-  //   console.log(req.query);
+  console.log(req.query);
   //   const data = req.query;
   const { username, password } = req.query;
-
+  console.log("working");
   console.log(username + "   " + password);
 
-  console.log(Admin);
+  // console.log();
 
   const userId = await Admin.findOne({
-    _id: new ObjectId("629b964d8daa76f8f65db471"),
+    username: username,
   })
     .then(async (userInfo) => {
       console.log("userInfo:", userInfo);
 
-      const match = await bcrypt.compare(password, userInfo.password);
-      console.log(match);
-      if (match) {
+      // const match = await bcrypt.compare(password, userInfo.password);
+      // console.log(match);
+      if (password === userInfo.password) {
+        ``;
         console.log("login successfully");
         return userInfo;
       }

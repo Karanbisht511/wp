@@ -1,16 +1,16 @@
 import "./Home.css";
-import Header from "./Header";
+import Header from "./peripherals/Header";
 
 import HomePart from "./HomePart";
-import AboutUs from "./AboutUs";
-import Footer from "./Footer";
+import AboutUs from "./peripherals/AboutUs";
+import Footer from "./peripherals/Footer";
 
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
 
 import InvitationHome from "./invitation/InvitationHome";
 import WeddingResort from "./weddingResorts/WeddingResortsHome";
-import PhotoVideoHome from "./photographer/videographer/photo/PhotoVideoHome";
+import PhotoVideoHome from "./photographer/PhotoVideoHome";
 import DecoratorHome from "./decorator/DecoratorHome";
 import Explore from "./explore/Explore";
 import Dashboard from "./dashboard/Dashboard";

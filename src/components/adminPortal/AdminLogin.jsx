@@ -10,7 +10,7 @@ export default function AdminLogin() {
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = async (data) => {
     console.log(data);
-    const receivedData = await Axios.get("http://localhost:5000/adminLogin", {
+    const receivedData = await Axios.get("http://localhost:5000/admin/login", {
       params: {
         username: data.username,
         password: data.password,
@@ -31,7 +31,6 @@ export default function AdminLogin() {
     if (receivedData === "login failed") {
       window.alert("login failed");
     } else {
-      sessionStorage.setItem("userInformation", JSON.stringify(receivedData));
       //   addHeaderAndFooter();
       //   window.location.assign("http://localhost:4001/");
       navigate(`/admin`);

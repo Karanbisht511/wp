@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./SignupForm.css";
 import { useForm } from "react-hook-form";
-// import OutsideClickHandler from "react-outside-click-handler/build/OutsideClickHandler";
+
 import Axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -58,14 +58,6 @@ export default function LoginForm() {
   };
 
   useEffect(removeHeaderAndFooter, []);
-
-  // if (errors) {
-  //   console.log("error");
-  //   document.getElementsByClassName("signup-leftPart").style.padding = "200px";
-  // }
-  // const handleOutsideClick = () => {
-  //   handleSignupClick();
-  // };
 
   return (
     <div className="login-container">
