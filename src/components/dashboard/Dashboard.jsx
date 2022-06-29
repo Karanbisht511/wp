@@ -7,6 +7,7 @@ import Tiles from "../Tiles";
 export default function Dashboard() {
   // const [allDetails, setAllDetails] = useState();
   const navigate = useNavigate();
+  const [cardDetails, setCardDetails] = useState();
   const [template, setTemplate] = useState();
   const [decorator, setDecorator] = useState();
   const [cosmetologist, setCosmetologist] = useState();
@@ -146,6 +147,7 @@ export default function Dashboard() {
     )
       .then((response) => {
         console.log(response.data);
+        setCardDetails(response.data.cardDetails);
         return response.data;
       })
       .catch((error) => {
@@ -182,6 +184,28 @@ export default function Dashboard() {
           <button className="button">Update</button>
         </Link>
       </div>
+
+      {/* {cardDetails && (
+        <div id="cardDetails">
+          <span className="detail">Groom:</span> {cardDetails.groomName}
+          <br></br>
+          <span className="detail">Bride:</span>
+          {cardDetails.brideName}
+          <br></br>
+          {cardDetails.startDate && cardDetails.endDate ? (
+            <p>
+              {" "}
+              <span className="detail">Date:</span> {cardDetails.startDate} -{" "}
+              {cardDetails.endDate}{" "}
+            </p>
+          ) : (
+            <p>
+              <span className="detail">Date:</span>
+              {cardDetails.eventDate})
+            </p>
+          )}
+        </div>
+      )} */}
 
       <div className="right-container">
         <h1 style={{ textAlign: "center" }}>Arrangements</h1>

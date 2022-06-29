@@ -44,8 +44,8 @@ exports.createWeddingResort = async (req, res) => {
 };
 
 exports.deleteWeddingResortById = async (req, res) => {
-  console.log("weddingResortId", req.query.ResortId);
-  const weddingResortId = new ObjectId(req.query.ResortId);
+  console.log("weddingResortId", req.query.id);
+  const weddingResortId = new ObjectId(req.query.id);
   const responseFromDb = await weddingResort
     .deleteOne({ _id: weddingResortId })
     .then((response) => {

@@ -8,7 +8,7 @@ exports.getAllTemplates = async (req, res) => {
 };
 
 exports.getTemplateById = async (req, res) => {
-  console.log("InvitaionTemplateId:", req.query.id);
+  console.log("InvitationTemplateId:", req.query.id);
   const invitaionTemplateId = new ObjectId(req.query.id);
   console.log(invitaionTemplateId);
   const InvitaionTemplateDetails = await invitaionTemplate
